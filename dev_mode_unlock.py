@@ -251,6 +251,10 @@ def main():
     if not apk or not os.path.isfile(apk):
         print("Information : avant d'utiliser ce script vous devez avoir l'APK des parametres "
               "de votre decodeur, vous pouvez la recuperer via un explorateur de fichier.")
+        print("Si le script ne fonctionne pas ou n'affiche aucun code pour votre modele, vous "
+              "pouvez ouvrir une issue sur GitHub. Creez un compte GitHub (gratuit) ou connectez-"
+              "vous, puis rendez-vous sur :")
+        print("https://github.com/dotkl3m/dev_mode_unlock/issues/new?template=retour-modele.md")
         apk = _ask_apk()
     if not apk:
         print("Aucune APK.")
