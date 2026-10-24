@@ -41,13 +41,9 @@ python dev_mode_unlock.py chemin/vers/TvSettings.apk
 
 ---
 
-## 📦 Récupérer l'APK des Paramètres (via adb)
+## 📦 Récupérer l'APK des Paramètres 
 
-```bash
-adb connect <IP_DU_DECODEUR>:5555
-adb shell pm path com.android.tv.settings
-adb pull /chemin/affiche/TvSettings.apk TvSettings.apk
-```
+Utilisez un explorateur de fichiers
 
 **Numéro de série** : `Paramètres → À propos → État → Numéro de série`
 (ou `adb shell getprop ro.serialno`).
