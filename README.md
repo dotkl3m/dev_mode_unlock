@@ -46,7 +46,6 @@ python dev_mode_unlock.py chemin/vers/TvSettings.apk
 Utilisez un explorateur de fichiers
 
 **Numéro de série** : `Paramètres → À propos → État → Numéro de série`
-(ou `adb shell getprop ro.serialno`).
 
 ---
 
