@@ -41,9 +41,36 @@ python dev_mode_unlock.py chemin/vers/TvSettings.apk
 
 ---
 
-## 📦 Récupérer l'APK des Paramètres 
+## 📦 Récupérer l'APK des Paramètres
 
-Utilisez un explorateur de fichiers
+**Aucun adb nécessaire** : tout se fait depuis le décodeur avec un explorateur de fichiers, puis une clé USB.
+
+### 1. Installer X-plore File Manager
+
+Play Store du décodeur → chercher `X-plore` → installer.
+(X-plore est l'un des rares explorateurs réellement utilisables à la télécommande, et il sait exporter l'APK d'une app installée.)
+
+### 2. Brancher la clé USB
+
+Formatée en **FAT32** ou **exFAT**, directement sur le port USB du décodeur.
+
+### 3. Localiser l'APK des Paramètres
+
+- Ouvrir X-plore → panneau de **gauche** → **App manager** (gestionnaire d'applications)
+- Menu (≡ ou touche menu de la télécommande) → activer **Show system apps** / *afficher les applications système*
+- Repérer l'app *Paramètres*. X-plore affiche le **nom de package** sous le nom de l'app : cherchez un `com.*.settings` — en général `com.android.tv.settings`, parfois `com.sdmc.settings` sur les décodeurs SDMC.
+
+### 4. Copier l'APK sur la clé
+
+- Panneau de **droite** → sélectionner la clé USB (`/mnt/usb...`)
+- Sur l'app : **OK long** → **Copy** → **Paste** dans le panneau de droite
+- Vous obtenez un fichier `.apk` — ou un `.zip` s'il s'agit d'une *split-APK* : **gardez-le tel quel**, le script sait le lire.
+
+### 5. Transférer sur le PC
+
+Débranchez la clé et branchez-la sur le PC, puis lancez le script sur le fichier récupéré.
+
+> **Variante sans clé USB** : X-plore gère nativement **WebDAV / FTP / clouds**. Vous pouvez copier l'APK directement vers votre serveur ou votre cloud depuis la TV, puis le récupérer sur le PC. Pour l'envoyer à quelqu'un (ex. pour une issue), un simple dépôt sur **wetransfer.com** depuis le PC suffit : déposez le fichier → *Envoyer un lien* → copiez le lien.
 
 **Numéro de série** : `Paramètres → À propos → État → Numéro de série`
 
@@ -93,4 +120,4 @@ Outil fourni **à des fins d'interopérabilité et d'usage personnel**, à utili
 
 ## 🔎 Mots-clés
 
-`SFR Connect TV` · `Connect TV V2` · `Connect TV V3` · `mode développeur` · `developer mode` · `developer options` · `déblocage décodeur` · `unlock developer mode` · `Android TV` · `SDMC` · `décodeur SFR` · `box SFR` · `code PIN mode développeur` · `adb` · `reverse engineering` · `DEX` · `PBKDF2` · `AES` · `Python`
+`SFR Connect TV` · `Connect TV V2` · `Connect TV V3` · `mode développeur` · `developer mode` · `developer options` · `déblocage décodeur` · `unlock developer mode` · `Android TV` · `SDMC` · `décodeur SFR` · `box SFR` · `code PIN mode développeur` · `sans adb` · `X-plore` · `extraire APK` · `adb` · `reverse engineering` · `DEX` · `PBKDF2` · `AES` · `Python`
